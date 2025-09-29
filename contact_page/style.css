@@ -1,0 +1,47 @@
+body{
+    background-color:#1a1818;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+.contact-text {
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.contact-form{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width:400px;
+    margin: 30px auto;
+}
+
+.contact-form button{
+background-color: #007BFF;   /* Blue color */
+  color: white;                /* Text color */
+  padding: 12px 20px;          /* Top-bottom, left-right spacing */
+  border: 0;                /* Remove default border */
+  border-radius: 10px;          /* Rounded corners */
+  font-size: 15px;             /* Text size */
+  font-weight: bold;           /* Make text bold */
+  cursor: pointer;             /* Hand cursor on hover */
+  transition: background 0.3s; /* Smooth hover effect */
+
+}
+
+.contact-form button:hover{
+    background-color: #0056b3;
+}
