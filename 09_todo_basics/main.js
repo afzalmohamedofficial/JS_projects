@@ -3,10 +3,8 @@
 // user can able to search tasks
 // user can update a task as complete and undo
 
-
 let tasks = []
 let resultelement = document.getElementById("result")
-
 
 function rendertask(){
     // reset result element
