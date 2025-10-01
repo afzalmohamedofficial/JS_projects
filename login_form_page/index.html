@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper" id="formWrapper">
+
+    <!-- Login Form -->
+    <div class="form-container login">
+        <h2>Login</h2>
+        <form>
+        <input type="email" placeholder="Enter Email Id" required />
+        <input type="password" placeholder="Enter Password" required />
+        <div class="forgot-password" tabindex="0">Forgot password?</div>
+        <button type="submit" class="submit-btn">Login</button>
+        </form>
+    </div>
+
+    <div class = "form-container signin">
+        <h2>Sign Up</h2>
+        <form>
+            <input type="text" placeholder="UserName" required/>
+            <input type="email" placeholder="Email Id" required/>
+            <input type="password" placeholder="Password" required/>
+            <input type="password" placeholder="Confirm Password" required/>
+
+            <label class="accept-terms">
+                <input type="checkbox" required /> I accept the terms and conditions
+            </label>
+        </form>
+    </div>
+
+    <div class="toggle-container">
+        <h2 id="toggleHeading">Don't have an account?</h2>
+        <p id ="toggleText">Sign up to get started!</p>
+        <button class="switch-btn" id="toggleBtn">Sign Up</button>
+    </div>
+        
+
+        
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
