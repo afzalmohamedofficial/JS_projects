@@ -1,0 +1,32 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      color: #333;
+      background-color: #fafafa;
+    }
+
+header {
+    text-align: center;
+    background: linear-gradient(to right, #517293, #3498db);
+    color : white;
+    padding : 2rem 1rem;
+    }
+
+      header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+       header h3 {
+      margin: 0.3rem 0;
+      font-weight: 400;
+    }
+
+    header h4 {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
