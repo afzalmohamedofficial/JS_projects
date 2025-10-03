@@ -3,24 +3,40 @@
 // user can able to search tasks
 // user can update a task as complete and undo
 
-let tasks = []
+let tasks = JSON.parse(localStorage.getItem("tasks")) || []
 let resultelement = document.getElementById("result")
+
+
 
 function rendertask(array){
     // reset result element
     resultelement.innerHTML = ""
     // append all values in result
-    array.forEach((item, index) => {
-        resultelement.innerHTML += `<div>
-        <h1><input type="checkbox" onchange="toggleComplete(${item.id})" ${item.isCompleted ? "checked" : ""}>${item.name} - ${item.isCompleted ? "Completed" : "" }</h1>
-        <button onclick="deletetask(${item.id})">Delete</button>
-        </div>`
+    array.forEach((item) => {
+        let divElement = document.createElement('div')
+        divElement.innerHTML += `
+        <h1><input type="checkbox" ${item.isCompleted ? "checked" : ""}>${item.name} - ${item.isCompleted ? "Completed" : "" }</h1>
+        <button>Delete</button>
+        `
+        divElement.querySelector('input').addEventListener('change', ()=>{
+            toggleComplete(item.id)
+        })
+
+        divElement.querySelector('button').addEventListener('click', ()=>{
+            deletetask(item.id)
+        })
+
+        resultelement.appendChild(divElement)
     })
 }
 
+rendertask(tasks)
+
 function deletetask(taskID){
     tasks = tasks.filter(item => item.id != taskID)
+    localStorage.setItem("tasks", JSON.stringify(tasks))
     rendertask(tasks)
+    
 }
 
 document.getElementById("addbtn").addEventListener("click", ()=>{
@@ -30,6 +46,7 @@ document.getElementById("addbtn").addEventListener("click", ()=>{
 
     // push value to array
     tasks.push(obj)
+    localStorage.setItem("tasks", JSON.stringify(tasks))
     rendertask(tasks)
     })
 
@@ -52,5 +69,7 @@ function toggleComplete(taskID){
             
         }
     })
+    localStorage.setItem("tasks", JSON.stringify(tasks))
     rendertask(tasks)
+    
 }
